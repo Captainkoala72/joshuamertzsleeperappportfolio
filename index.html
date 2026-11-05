@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Joshua Mertz · Career Mode</title>
+    <meta name="description" content="Joshua Mertz: tennis fan, community builder since the Minecraft days, college esports manager and AI builder. My portfolio for Sleeper's Tennis Content Curator role." />
+    <meta name="author" content="Joshua Mertz" />
+    <meta name="theme-color" content="#060a18" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Joshua Mertz · Career Mode" />
+    <meta property="og:title" content="Joshua Mertz · Career Mode" />
+    <meta property="og:description" content="Tennis fan, community builder, esports manager and AI builder. My application for Sleeper's Tennis Content Curator role." />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:image" content="__SITE_URL__/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Joshua Mertz player card: Career Mode, Tennis Content Curator prospect" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Joshua Mertz · Career Mode" />
+    <meta name="twitter:description" content="Tennis fan, community builder, esports manager and AI builder." />
+    <meta name="twitter:image" content="__SITE_URL__/og.jpg" />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.remove('no-js');
+        d.classList.add('js');
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var seen = false;
+        try { seen = sessionStorage.getItem('jm-intro') === '1'; } catch (e) {}
+        if (!reduce && !seen) d.classList.add('intro-on');
+      })();
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#attributes">Skip to content</a>
+
+    <!-- Boot screen: plays once per visit, click or press any key to skip -->
+    <div class="intro" data-intro aria-hidden="true">
+      <div class="intro__inner">
+        <span class="intro__ball"></span>
+        <p class="intro__eyebrow">Career Mode</p>
+        <p class="intro__title">Loading save <span>JOSHUA_MERTZ.SAV</span></p>
+        <div class="intro__bar"><span></span></div>
+        <p class="intro__tip">Tip: the player card flips.</p>
+      </div>
+    </div>
+
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--1"></div>
+      <div class="bg__glow bg__glow--2"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+    <header class="nav" data-nav>
+      <a class="nav__brand" href="#top" aria-label="Joshua Mertz, back to top">
+        <span class="ball" aria-hidden="true"></span>
+        <span class="nav__name">Joshua Mertz</span>
+        <span class="nav__tag">Career Mode</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#fan">Fan Profile</a>
+        <a href="#career">Career</a>
+        <a href="#draft">The Draft</a>
+        <a href="#vault">The Vault</a>
+        <a href="#scouting">Scouting Report</a>
+        <a href="#resume">Résumé</a>
+      </nav>
+      <a class="btn btn--lime btn--sm nav__cta" href="mailto:joshuamertz716@gmail.com">Email me</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mmenu" id="mobile-menu" hidden>
+      <nav aria-label="Sections">
+        <a href="#fan">Fan Profile</a>
+        <a href="#career">Career</a>
+        <a href="#draft">The Draft</a>
+        <a href="#vault">The Vault</a>
+        <a href="#scouting">Scouting Report</a>
+        <a href="#resume">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--lime" href="mailto:joshuamertz716@gmail.com">joshuamertz716@gmail.com</a>
+    </div>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero__bg" aria-hidden="true">
+          <svg class="court" viewBox="0 0 1600 720" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse">
+                <path d="M0 0L9 9M9 0L0 9" stroke="currentColor" stroke-width=".7" />
+              </pattern>
+            </defs>
+            <g class="court__lines" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path pathLength="1" d="M100 700L1500 700L1040 120L560 120Z" />
+              <path pathLength="1" d="M275 700L620 120" />
+              <path pathLength="1" d="M1325 700L980 120" />
+              <path pathLength="1" d="M358 560L1242 560" />
+              <path pathLength="1" d="M525 280L1075 280" />
+              <path pathLength="1" d="M800 560L800 280" />
+              <path pathLength="1" d="M800 700L800 684" />
+              <path pathLength="1" d="M800 120L800 130" />
+            </g>
+            <g class="court__net" stroke="currentColor" stroke-linecap="round">
+              <path d="M318 366L1282 366L1282 402L318 402Z" fill="url(#mesh)" stroke="none" opacity=".5" />
+              <path d="M318 366L1282 366" stroke-width="4" />
+              <path d="M318 366L318 404M1282 366L1282 404" stroke-width="4" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow" data-hero-in>
+            <span class="live-dot"></span>Season 4 · Live<span class="eyebrow__sep" aria-hidden="true">/</span>Career Mode
+          </p>
+
+          <h1 class="hero__title" data-hero-in>
+            <span class="hero__line">Joshua</span>
+            <span class="hero__line hero__line--lime">Mertz</span>
+          </h1>
+
+          <p class="hero__meta" data-hero-in>
+            <span class="hero__role">Tennis Content Curator prospect</span>
+            <span>Esports Management, Harrisburg U '27</span>
+            <span>Williamsville, NY</span>
+          </p>
+
+          <p class="hero__lead" data-hero-in>
+            Tennis is my favorite sport, so much that I built my own 3D tennis video game. I've also been running online communities since I was a kid: <strong>50+ Minecraft UHC games</strong> for 40–80 players each, <strong>two college esports programs</strong> and a stack of AI-powered apps. Now I want to make <strong>Sleeper's tennis community</strong> the best place to talk tennis.
+          </p>
+
+          <div class="hero__ctas" data-hero-in>
+            <a class="btn btn--lime" href="#career">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg>
+              Start career
+            </a>
+            <a class="btn btn--ghost" href="#scouting">Scouting report</a>
+          </div>
+          </div>
+
+          <div class="hero__card" data-hero-in>
+            <div class="card-float">
+              <div class="card3d" data-card>
+                <div class="pcard" role="button" tabindex="0" aria-pressed="false" aria-label="Joshua Mertz player card, overall 92. Press to flip and read the bio.">
+                  <div class="pcard__inner">
+                    <div class="pcard__face pcard__front">
+                      <img class="pcard__photo" src="/img/me/joshua.webp" srcset="/img/me/joshua-sm.webp 400w, /img/me/joshua.webp 640w" sizes="(max-width: 960px) 320px, 380px" width="640" height="854" alt="Joshua Mertz" fetchpriority="high" />
+                      <div class="pcard__shade"></div>
+                      <div class="pcard__ovr">
+                        <strong data-count="92">92</strong>
+                        <span>CUR</span>
+                        <i class="ball ball--sm" aria-hidden="true"></i>
+                      </div>
+                      <div class="pcard__plate">
+                        <p class="pcard__name">Mertz</p>
+                        <div class="pcard__stats">
+                          <span><b data-count="95">95</b>COM</span>
+                          <span><b data-count="92">92</b>TEN</span>
+                          <span><b data-count="88">88</b>CRE</span>
+                          <span><b data-count="91">91</b>MOD</span>
+                          <span><b data-count="90">90</b>OPS</span>
+                          <span><b data-count="96">96</b>AI</span>
+                        </div>
+                        <div class="pcard__foot"><span>Harrisburg U '27</span><span>Since 2011</span></div>
+                      </div>
+                      <div class="pcard__shine"></div>
+                      <div class="pcard__glare"></div>
+                    </div>
+                    <div class="pcard__face pcard__back">
+                      <p class="pcard__label">Player bio</p>
+                      <dl class="bio">
+                        <div><dt>Position</dt><dd>Tennis Content Curator</dd></div>
+                        <div><dt>Hometown</dt><dd>Williamsville, NY</dd></div>
+                        <div><dt>School</dt><dd>Harrisburg U · Spring '27</dd></div>
+                        <div><dt>Handles</dt><dd>xVex · xVechs</dd></div>
+                        <div><dt>On Sleeper since</dt><dd>Sep 22, 2023</dd></div>
+                        <div><dt>Favorite sport</dt><dd>Tennis</dd></div>
+                        <div><dt>Team for life</dt><dd>Buffalo Bills</dd></div>
+                      </dl>
+                      <p class="pcard__label">Traits</p>
+                      <ul class="traits">
+                        <li>Hall of Fame Host</li>
+                        <li>Playoff Coach</li>
+                        <li>Chat Whisperer</li>
+                        <li>AI Playmaker</li>
+                      </ul>
+                      <p class="pcard__dev">Dev trait <strong>X-Factor</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="hero__hint">Flip the card for the bio</p>
+          </div>
+        </div>
+
+        <div class="ticker" data-hero-in>
+          <p class="ticker__label"><span class="live-dot live-dot--white"></span>Live</p>
+          <div class="ticker__viewport"><div class="ticker__track" data-ticker></div></div>
+        </div>
+      </section>
+
+      <!-- ============ 01 ATTRIBUTES ============ -->
+      <section class="section attrs" id="attributes">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>01</span>Attributes</p>
+            <h2 class="sec-title" data-split>The ratings, <em>with receipts.</em></h2>
+            <p class="sec-sub" data-reveal>Every number on the card comes from something I've actually done.</p>
+          </header>
+
+          <div class="attrs__grid">
+            <article class="attr" data-value="95" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">COM</span><h3>Community</h3><span class="attr__val">95</span></header>
+              <div class="attr__bar"><span style="--v: 95"></span></div>
+              <p>50+ Minecraft UHC events for 40–80 players each, two college esports programs, and Discord servers with 100+ members.</p>
+            </article>
+            <article class="attr attr--tennis" data-value="92" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">TEN</span><h3>Tennis IQ</h3><span class="attr__val">92</span></header>
+              <div class="attr__bar"><span style="--v: 92"></span></div>
+              <p>My favorite sport. I built a tennis game with a 32-event season, ranking points, rivals and a commentary booth, and I follow the next wave like Fonseca and Shelton.</p>
+            </article>
+            <article class="attr" data-value="88" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">CRE</span><h3>Content</h3><span class="attr__val">88</span></header>
+              <div class="attr__bar"><span style="--v: 88"></span></div>
+              <p>About 200 edited YouTube videos, years of Twitch streams, a decade of graphics in Paint.NET and Photoshop, and 9 years of video editing.</p>
+            </article>
+            <article class="attr" data-value="91" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">MOD</span><h3>Moderation</h3><span class="attr__val">91</span></header>
+              <div class="attr__bar"><span style="--v: 91"></span></div>
+              <p>Three years of Discord moderation, plus refereeing live UHC matches where one bad call could set off the whole chat.</p>
+            </article>
+            <article class="attr" data-value="90" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">OPS</span><h3>Esports Ops</h3><span class="attr__val">90</span></header>
+              <div class="attr__bar"><span style="--v: 90"></span></div>
+              <p>Assistant coach, club co-leader, then club manager. Rosters, scouting, leagues like ECAC, events, A/V and onboarding.</p>
+            </article>
+            <article class="attr" data-value="96" data-reveal>
+              <header class="attr__top"><span class="attr__abbr">AI</span><h3>AI Builder</h3><span class="attr__val">96</span></header>
+              <div class="attr__bar"><span style="--v: 96"></span></div>
+              <p>25+ apps, sites and games built with AI, including a Windows app and a full 3D game. Code, images, 3D, video, music and SFX.</p>
+            </article>
+          </div>
+
+          <div class="totals" data-reveal>
+            <div class="total"><p class="total__num"><span data-odo="50">50</span><i>+</i></p><p class="total__label">UHC games hosted</p></div>
+            <div class="total"><p class="total__num"><span data-odo="2,000">2,000</span><i>+</i></p><p class="total__label">Player spots filled</p></div>
+            <div class="total"><p class="total__num"><i>~</i><span data-odo="200">200</span></p><p class="total__label">YouTube videos edited</p></div>
+            <div class="total"><p class="total__num"><span data-odo="30">30</span><i>+</i></p><p class="total__label">College players managed</p></div>
+            <div class="total"><p class="total__num"><span data-odo="25">25</span><i>+</i></p><p class="total__label">Builds made with AI</p></div>
+            <div class="total"><p class="total__num"><span data-odo="156">156</span></p><p class="total__label">DeuceTennis commits in 5 weeks</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 FAN PROFILE ============ -->
+      <section class="section fan" id="fan">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>02</span>Fan profile</p>
+            <h2 class="sec-title" data-split>Tennis is my sport. <em>The Bills are my team.</em></h2>
+            <p class="sec-sub" data-reveal>I'm a die-hard Bills fan, but tennis is my favorite sport, period.</p>
+          </header>
+
+          <div class="fan__grid">
+            <article class="fan__tennis" data-reveal>
+              <div class="fan__tennis-head">
+                <span class="fan__badge">Favorite sport</span>
+                <h3>Tennis</h3>
+                <span class="ball ball--lg" aria-hidden="true"></span>
+              </div>
+              <p class="fan__why">
+                I love that it's one-on-one, that the tour almost never stops, and that a single break of serve can flip a whole match. I love it enough that I spent this fall building my own tennis game.
+              </p>
+              <p class="fan__label">Favorite active players</p>
+              <ol class="players">
+                <li class="player"><span class="player__cc">BRA</span><strong>João Fonseca</strong><small>The next big thing out of Brazil</small></li>
+                <li class="player"><span class="player__cc">ITA</span><strong>Matteo Berrettini</strong><small>Serve, forehand, repeat</small></li>
+                <li class="player"><span class="player__cc">USA</span><strong>Ben Shelton</strong><small>Lefty rocket serve, nonstop energy</small></li>
+                <li class="player"><span class="player__cc">USA</span><strong>Frances Tiafoe</strong><small>The best showman on tour</small></li>
+                <li class="player"><span class="player__cc">ESP</span><strong>Carlos Alcaraz</strong><small>Can do literally everything</small></li>
+              </ol>
+            </article>
+
+            <div class="fan__side">
+              <article class="fan__teams" data-reveal>
+                <p class="fan__label">Teams I ride with</p>
+                <ul class="teams">
+                  <li class="team team--bills"><span class="team__league">NFL</span><strong>Buffalo Bills</strong><em>Die-hard</em></li>
+                  <li class="team team--knicks"><span class="team__league">NBA</span><strong>New York Knicks</strong></li>
+                  <li class="team team--sabres"><span class="team__league">NHL</span><strong>Buffalo Sabres</strong></li>
+                  <li class="team team--yankees"><span class="team__league">MLB</span><strong>New York Yankees</strong></li>
+                  <li class="team team--vols"><span class="team__league">NCAA</span><strong>Tennessee Volunteers</strong></li>
+                </ul>
+                <div class="kbo">
+                  <span class="kbo__tag">Soft spot</span>
+                  <p><strong>KBO baseball.</strong> Bat flips, cheer songs and nonstop energy. Greatly entertaining to watch.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <article class="tour" data-tour hidden data-reveal>
+            <header class="tour__head">
+              <span class="live-dot"></span>
+              <div>
+                <h3>Live from the tour</h3>
+                <p>ATP and WTA singles, pulled when you opened this page</p>
+              </div>
+              <p class="tour__key"><span class="tour__fav">★</span> = one of my guys</p>
+            </header>
+            <div class="tour__body" data-tour-body></div>
+            <p class="tour__foot">Scores from ESPN's public tennis feed. Times are in your time zone.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ 03 CAREER ============ -->
+      <section class="section career" id="career">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>03</span>Career</p>
+            <h2 class="sec-title" data-split>Four seasons. <em>One save file.</em></h2>
+            <p class="sec-sub" data-reveal>From Minecraft servers to college esports to building with AI. Every season leveled up something I'd use on day one at Sleeper.</p>
+          </header>
+        </div>
+
+        <div class="seasons" data-seasons>
+          <div class="rail">
+            <p class="rail__label">Season select</p>
+            <div class="rail__tabs">
+              <button class="rail__tab is-active" type="button" data-i="0" aria-label="Jump to Season 1"><b>S1</b><span>2011–16</span></button>
+              <button class="rail__tab" type="button" data-i="1" aria-label="Jump to Season 2"><b>S2</b><span>2017 on</span></button>
+              <button class="rail__tab" type="button" data-i="2" aria-label="Jump to Season 3"><b>S3</b><span>2021–25</span></button>
+              <button class="rail__tab" type="button" data-i="3" aria-label="Jump to Season 4"><b>S4</b><span>Now</span></button>
+            </div>
+            <div class="rail__track"><span class="rail__fill"></span></div>
+          </div>
+
+          <div class="seasons__track">
+            <!-- S1 -->
+            <article class="season season--1" aria-labelledby="s1-title">
+              <span class="season__num" aria-hidden="true">S1</span>
+              <div class="season__body">
+                <p class="season__years" data-s-in>Season 1 · 2011 – 2016</p>
+                <h3 class="season__title" id="s1-title" data-s-in>The Server Years</h3>
+                <p class="season__role" data-s-in>Minecraft YouTuber → UHC host</p>
+                <p class="season__text" data-s-in>
+                  I started a Minecraft YouTube channel around 2011 and edited about 200 videos for roughly 300 subscribers (the channel's gone now, RIP). Then I found Ultra Hardcore. From late 2014 to 2016 I hosted 50+ UHC games as xVex: renting and running servers, setting up plugins, designing graphics, promoting every match on Reddit and moderating 40–80 players at a time. It was event management before I knew that was a career.
+                </p>
+                <ul class="season__stats" data-s-in>
+                  <li><strong>50+</strong><span>UHC games hosted</span></li>
+                  <li><strong>40–80</strong><span>Players per game</span></li>
+                  <li><strong>~200</strong><span>Videos edited</span></li>
+                </ul>
+                <ul class="chips" data-s-in>
+                  <li>Event hosting</li><li>Server admin</li><li>Java plugins</li><li>Photoshop</li><li>Reddit promo</li><li>Moderation</li>
+                </ul>
+              </div>
+              <div class="season__visual" data-s-in aria-hidden="true">
+                <div class="s1vis">
+                  <div class="s1vis__tag"><small>Host</small><strong>xVex</strong><span>2014–2016</span></div>
+                  <img class="s1vis__strip s1vis__strip--1" src="/img/uhc/uhc16.webp" width="889" height="118" alt="" loading="lazy" />
+                  <img class="s1vis__strip s1vis__strip--2" src="/img/uhc/uhc14.webp" width="1077" height="184" alt="" loading="lazy" />
+                  <img class="s1vis__strip s1vis__strip--3" src="/img/uhc/uhc23.webp" width="1023" height="123" alt="" loading="lazy" />
+                  <p class="s1vis__sub">r/ultrahardcore · r/UHCMatches</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- S2 -->
+            <article class="season season--2" aria-labelledby="s2-title">
+              <span class="season__num" aria-hidden="true">S2</span>
+              <div class="season__body">
+                <p class="season__years" data-s-in>Season 2 · 2017, on and off</p>
+                <h3 class="season__title" id="s2-title" data-s-in>Going Live</h3>
+                <p class="season__role" data-s-in>Twitch streamer · CS &amp; Valorant</p>
+                <p class="season__text" data-s-in>
+                  In 2017 I started streaming Counter-Strike on Twitch as xVechs, and later Valorant. I streamed on and off, grew to 238 followers and picked up some subs and donations along the way. Small numbers, real lessons: how to keep a chat entertained, turn first-timers into regulars and cut the best moments into clips people want to share.
+                </p>
+                <ul class="season__stats" data-s-in>
+                  <li><strong>238</strong><span>Twitch followers</span></li>
+                  <li><strong>9 yrs</strong><span>Editing video</span></li>
+                  <li><strong>10 yrs</strong><span>Making graphics</span></li>
+                </ul>
+                <ul class="chips" data-s-in>
+                  <li>Live chat</li><li>OBS &amp; overlays</li><li>Video editing</li><li>Thumbnails</li><li>Clips &amp; highlights</li>
+                </ul>
+              </div>
+              <div class="season__visual" data-s-in>
+                <div class="stream" aria-hidden="true">
+                  <div class="stream__screen">
+                    <div class="stream__hud"><span class="stream__live">Live</span><span class="stream__game">Counter-Strike</span></div>
+                    <div class="stream__scope"><i></i></div>
+                    <div class="stream__cam"><span>xVechs</span></div>
+                    <div class="stream__alert">New follower!</div>
+                  </div>
+                  <div class="stream__chat">
+                    <p><b style="--c: #4db8ff">ace_42</b> that flick was clean</p>
+                    <p><b style="--c: #ff4d8d">mira</b> clip it clip it</p>
+                    <p><b style="--c: #2ee6c5">tobyz</b> first time here, followed</p>
+                    <p><b style="--c: #ffb547">dnk</b> gg go next</p>
+                    <p><b style="--c: #b98cff">lurker</b> W stream</p>
+                    <p><b style="--c: #d7ff3a">riv</b> what crosshair is that?</p>
+                  </div>
+                </div>
+                <p class="stream__meta">
+                  <strong>xVechs</strong> · 238 followers ·
+                  <a href="https://www.twitch.tv/xVechs" target="_blank" rel="noopener">twitch.tv/xVechs <span aria-hidden="true">↗</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- S3 -->
+            <article class="season season--3" aria-labelledby="s3-title">
+              <span class="season__num" aria-hidden="true">S3</span>
+              <div class="season__body">
+                <p class="season__years" data-s-in>Season 3 · 2021 – 2025</p>
+                <h3 class="season__title" id="s3-title" data-s-in>Front Office</h3>
+                <p class="season__role" data-s-in>Assistant coach → co-leader → club manager</p>
+                <p class="season__text" data-s-in>
+                  I went to school for esports management and kept getting handed the keys. In spring 2021 I was an assistant coach at SUNY Erie (ECC), working with every game but focused on Valorant. From fall 2021 to spring 2023 I co-led Medaille's esports club: events, a school-wide Minecraft server, building teams, joining the ECAC collegiate league and promotion. Then from fall 2023 to fall 2025 I managed ECC's club, with 30+ active players. Rocket League was our best team, with deep playoff runs year after year. Valorant was always the most fun, with playoff runs of its own.
+                </p>
+                <ul class="season__stats" data-s-in>
+                  <li><strong>30+</strong><span>Active players</span></li>
+                  <li><strong>5</strong><span>Semesters as manager</span></li>
+                  <li><strong>3 yrs</strong><span>Discord moderation</span></li>
+                </ul>
+                <ul class="chips" data-s-in>
+                  <li>Roster building</li><li>Scouting</li><li>Discord moderation</li><li>Event ops</li><li>A/V &amp; broadcast</li><li>ECAC league play</li>
+                </ul>
+              </div>
+              <div class="season__visual" data-s-in aria-hidden="true">
+                <div class="fo">
+                  <div class="fo__roles">
+                    <div class="fo__role"><b>Spring '21</b><span>Assistant coach</span><small>SUNY Erie (ECC)</small></div>
+                    <div class="fo__role"><b>Fall '21 – Spring '23</b><span>Club co-leader</span><small>Medaille College</small></div>
+                    <div class="fo__role is-current"><b>Fall '23 – Fall '25</b><span>Club manager</span><small>SUNY Erie (ECC)</small></div>
+                  </div>
+                  <div class="fo__teams">
+                    <div class="fo__team fo__team--rl"><small>Rocket League</small><strong>Deep playoff runs</strong><span>Our best team, year after year</span></div>
+                    <div class="fo__team fo__team--val"><small>Valorant</small><strong>Playoff runs</strong><span>Always the most fun to coach</span></div>
+                  </div>
+                  <div class="fo__roster">
+                    <span class="fo__roster-label">30+ active players</span>
+                    <div class="fo__dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- S4 -->
+            <article class="season season--4" aria-labelledby="s4-title">
+              <span class="season__num" aria-hidden="true">S4</span>
+              <div class="season__body">
+                <p class="season__years" data-s-in>Season 4 · Now <span class="tag-live"><span class="live-dot"></span>Live</span></p>
+                <h3 class="season__title" id="s4-title" data-s-in>AI Builder</h3>
+                <p class="season__role" data-s-in>Student · builder · always shipping</p>
+                <p class="season__text" data-s-in>
+                  Now I'm finishing my B.S. in Esports Management at Harrisburg University (online, graduating spring 2027) and building with AI every day: code, images, 3D models, video, music and sound effects. That's how one person ends up with 25+ apps, a Windows clipping tool and DeuceTennis, a full 3D tennis game. The tech is the fun part. The real skill is turning "it'd be cool if…" into something people actually use.
+                </p>
+                <ul class="season__stats" data-s-in>
+                  <li><strong>25+</strong><span>Builds with AI</span></li>
+                  <li><strong>156</strong><span>Game commits</span></li>
+                  <li><strong>'27</strong><span>Graduation</span></li>
+                </ul>
+                <ul class="chips" data-s-in>
+                  <li>Claude Code</li><li>Codex</li><li>Godot</li><li>Blender</li><li>Meshy</li><li>ElevenLabs</li><li>Google Flow</li><li>Gemini</li>
+                </ul>
+              </div>
+              <div class="season__visual" data-s-in aria-hidden="true">
+                <div class="mosaic">
+                  <img class="mosaic__a" src="/img/deuce/keyart-sm.webp" width="960" height="536" alt="" loading="lazy" />
+                  <img class="mosaic__b" src="/img/projects/goofyfantasyhub1-sm.webp" width="720" height="379" alt="" loading="lazy" />
+                  <img class="mosaic__c" src="/img/projects/ghl1-sm.webp" width="720" height="324" alt="" loading="lazy" />
+                  <img class="mosaic__d" src="/img/projects/oneshottedbrowsergame2-sm.webp" width="720" height="375" alt="" loading="lazy" />
+                  <img class="mosaic__e" src="/img/projects/musicmaker3-sm.webp" width="720" height="307" alt="" loading="lazy" />
+                  <img class="mosaic__f" src="/img/projects/wispclips2-sm.webp" width="720" height="540" alt="" loading="lazy" />
+                  <span class="mosaic__live"><span class="live-dot live-dot--white"></span>Live</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 04 THE DRAFT ============ -->
+      <section class="section draft" id="draft">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>04</span>The Draft</p>
+            <h2 class="sec-title" data-split>Twenty projects. <em>Here's my board.</em></h2>
+            <p class="sec-sub" data-reveal>Ranked the way I'd draft them. Almost all of them were built with AI coding agents like Claude Code and Codex, and every one taught me something.</p>
+          </header>
+
+          <article class="spotlight" id="deucetennis" aria-labelledby="dt-title">
+            <div class="spotlight__ambient" aria-hidden="true"><img src="/img/deuce/keyart-sm.webp" width="960" height="536" alt="" loading="lazy" /></div>
+
+            <header class="spotlight__head">
+              <p class="spotlight__pick" data-reveal><span>Round 1</span><span>Pick 1</span></p>
+              <p class="spotlight__with" data-spot-with>With the first overall pick in my project draft…</p>
+              <h3 class="spotlight__title" id="dt-title">
+                <img class="spotlight__logo" src="/img/deuce/logo-wide.webp" srcset="/img/deuce/logo-wide-sm.webp 480w, /img/deuce/logo-wide.webp 900w" sizes="(max-width: 720px) 90vw, 560px" width="900" height="450" alt="DeuceTennis" loading="lazy" />
+              </h3>
+              <p class="spotlight__tag" data-reveal>A full 3D tennis game with a real career mode, built by one person and a lot of AI.</p>
+            </header>
+
+            <div class="spotlight__grid">
+              <div class="spotlight__video" data-reveal>
+                <button class="yt" type="button" data-yt="ot-hRkh_hWo" aria-label="Play the DeuceTennis showcase video on YouTube">
+                  <img src="/img/deuce/keyart-sm.webp" srcset="/img/deuce/keyart-sm.webp 960w, /img/deuce/keyart.webp 1920w" sizes="(max-width: 960px) 100vw, 640px" width="1920" height="1071" alt="" loading="lazy" />
+                  <span class="yt__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" /></svg></span>
+                  <span class="yt__label">Watch the showcase</span>
+                </button>
+              </div>
+              <div class="spotlight__copy" data-reveal>
+                <p>
+                  Tennis is my favorite sport, so I built the tennis game I always wanted. DeuceTennis started as a 2D prototype in C# WinForms (physics, scoring rules and AI opponents), then I rebuilt it in 3D in Godot. The goal from day one: make it feel like a 2K or Madden game, with a dev team of one.
+                </p>
+                <p>
+                  I run it like a studio where AI fills the roles. Claude Code and Codex write and refactor the code, Meshy builds the players, ElevenLabs voices the commentators, umpire and crowd, Google Flow helps with video, and Blender, driven by 10,000+ lines of Python tooling, builds the courts, trophies and everything in between.
+                </p>
+                <p class="callout">
+                  <strong>My favorite detail for this application:</strong> there's a social network inside the game. BallBuzz has three sports networks and five analysts reacting to your matches, and you choose how to post back: humble, hype, cocky or trash talk. Your fan meter rides on it. I've already built a tennis social feed. Now I want to run a real one.
+                </p>
+              </div>
+            </div>
+
+            <ul class="dstats">
+              <li data-reveal><strong data-count="156">156</strong><span>Commits in 5 weeks</span></li>
+              <li data-reveal><strong><span data-count="62">62</span>K</strong><span>Lines of GDScript</span></li>
+              <li data-reveal><strong data-count="44">44</strong><span>Meshy player models</span></li>
+              <li data-reveal><strong data-count="6">6</strong><span>AI commentators</span></li>
+              <li data-reveal><strong data-count="954">954</strong><span>Voice lines in one booth update</span></li>
+              <li data-reveal><strong data-count="130">130</strong><span>Achievements</span></li>
+              <li data-reveal><strong data-count="32">32</strong><span>Events per season</span></li>
+              <li data-reveal><strong data-count="50">50</strong><span>Racquets to unlock</span></li>
+            </ul>
+
+            <div class="features">
+              <article class="feature" data-reveal>
+                <h4>Career mode</h4>
+                <p>A 14-week season with 32 events, ranking points, four rivals with real personalities, 130 achievements and a 3D trophy cabinet.</p>
+              </article>
+              <article class="feature feature--hot" data-reveal>
+                <h4>BallBuzz</h4>
+                <p>An in-game social feed. Three networks and five analysts react to your results, and every post you make moves your fan meter.</p>
+              </article>
+              <article class="feature" data-reveal>
+                <h4>The booth</h4>
+                <p>Six ElevenLabs commentators with back-and-forth exchanges, spoken score calls, an umpire and line judges, and your nickname on the PA.</p>
+              </article>
+              <article class="feature" data-reveal>
+                <h4>Broadcast presentation</h4>
+                <p>"The Build" startup cinematic, stadium walk-ons, replays, a big screen, Lynx-Eye line calls and an animated court crew at the change of ends.</p>
+              </article>
+              <article class="feature" data-reveal>
+                <h4>Players &amp; gear</h4>
+                <p>44 Meshy player models from 10 nations on a custom 33-bone hand and arm rig, plus 50 racquets to unlock.</p>
+              </article>
+              <article class="feature" data-reveal>
+                <h4>Jam Cans &amp; JamBox</h4>
+                <p>Loot-box style Jam Cans hold 65 tracks I made, and a handheld JamBox plays them during matches.</p>
+              </article>
+            </div>
+
+            <div class="toolchain" data-reveal>
+              <p class="toolchain__label">The toolchain</p>
+              <ul class="chips">
+                <li>Godot 4</li><li>GDScript</li><li>C# (prototype)</li><li>Claude Code</li><li>Codex</li><li>Blender</li><li>Python</li><li>Meshy</li><li>ElevenLabs</li><li>Google Flow</li><li>Pixazo</li>
+              </ul>
+            </div>
+
+            <div class="dgallery">
+              <button class="dgallery__item" type="button" data-reveal data-lb="deuce" data-src="/img/deuce/ingame-victory.webp" data-caption="Victory: the full match stat breakdown">
+                <img src="/img/deuce/ingame-victory-sm.webp" width="720" height="405" alt="DeuceTennis victory screen with the full match stat breakdown" loading="lazy" />
+              </button>
+              <button class="dgallery__item" type="button" data-reveal data-lb="deuce" data-src="/img/deuce/career-champion.webp" data-caption="Career mode: winning a title">
+                <img src="/img/deuce/career-champion-sm.webp" width="720" height="405" alt="DeuceTennis career mode champion screen" loading="lazy" />
+              </button>
+              <button class="dgallery__item" type="button" data-reveal data-lb="deuce" data-src="/img/deuce/career-victory.webp" data-caption="Career mode: a qualifying-round win">
+                <img src="/img/deuce/career-victory-sm.webp" width="720" height="405" alt="DeuceTennis career mode victory screen" loading="lazy" />
+              </button>
+              <button class="dgallery__item dgallery__item--light" type="button" data-reveal data-lb="deuce" data-src="/img/deuce/meshy-player.webp" data-caption="One of 44 Meshy player models, front and back">
+                <img src="/img/deuce/meshy-player-sm.webp" width="720" height="360" alt="A DeuceTennis player model made with Meshy, front and back" loading="lazy" />
+              </button>
+              <button class="dgallery__item dgallery__item--wide" type="button" data-reveal data-lb="deuce" data-src="/img/deuce/booth-commentators.webp" data-caption="The booth: all six AI commentators as 3D models">
+                <img src="/img/deuce/booth-commentators-sm.webp" width="900" height="150" alt="The six DeuceTennis commentators as 3D models in the booth" loading="lazy" />
+              </button>
+            </div>
+          </article>
+
+          <div class="board">
+            <div class="board__head">
+              <div>
+                <p class="board__kicker">The rest of the board</p>
+                <h3 class="board__title">Picks 1.02 – 2.10</h3>
+              </div>
+              <div class="filters" role="group" aria-label="Filter projects" data-filters></div>
+            </div>
+            <div class="board__grid" data-board></div>
+            <noscript><p class="noscript">Turn on JavaScript to browse the project board.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 05 THE VAULT ============ -->
+      <section class="section vault" id="vault">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>05</span>The Vault</p>
+            <h2 class="sec-title" data-split>Before it was my major, <em>it was my weekends.</em></h2>
+            <p class="sec-sub" data-reveal>Minecraft UHC, 2014 – 2016. The origin story.</p>
+          </header>
+
+          <div class="vault__top">
+            <div class="vault__story" data-reveal>
+              <p>
+                UHC (Ultra Hardcore) is a Minecraft mode where your health doesn't regenerate and one death sends you home. Every match needs a host to schedule it, post it, set up the server and the scenarios, and referee the chaos live. From December 2014 to July 2016, that host was me.
+              </p>
+              <p>
+                As <strong>xVex</strong>, I ran a little over 50 games for 40–80 players at a time across The Arcus Network, Arcus UHC, Neighborhood and Apollo UHC. I rented and self-hosted servers, configured plugins (and wrote my own, MeleeFun, in Java), designed graphics, promoted every match on Reddit and moderated all of it. Thousands of hours. It's the reason I got into event management.
+              </p>
+            </div>
+            <div class="vault__side" data-reveal>
+              <dl class="vstats">
+                <div><dt>Games hosted</dt><dd>50+</dd></div>
+                <div><dt>Players per game</dt><dd>40–80</dd></div>
+                <div><dt>Player spots filled</dt><dd>2,000+</dd></div>
+                <div><dt>Servers</dt><dd>4</dd></div>
+              </dl>
+              <p class="vault__label">Scenarios I ran <span>★ = my own plugin</span></p>
+              <ul class="scenarios" data-scenarios></ul>
+            </div>
+          </div>
+
+          <div class="feed" data-reveal>
+            <div class="feed__head">
+              <p class="feed__title">The match posts</p>
+              <p class="feed__sub">Screenshots of my original posts on r/ultrahardcore and r/UHCMatches. Pick an era, and tap a post to zoom.</p>
+            </div>
+            <div class="feed__tabs" role="tablist" aria-label="UHC eras" data-feed-tabs></div>
+            <div class="feed__panel" role="tabpanel" tabindex="0" data-feed-panel data-lenis-prevent></div>
+          </div>
+
+          <div class="vlinks" data-uhc-links hidden>
+            <p class="vault__label">Match threads on Reddit</p>
+            <ul class="vlinks__list" data-uhc-list></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 06 SCOUTING REPORT ============ -->
+      <section class="section scout" id="scouting">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>06</span>Scouting report</p>
+            <h2 class="sec-title" data-split>Built for <em>Sleeper Tennis.</em></h2>
+            <p class="sec-sub" data-reveal>What I'd bring to the tennis community on day one, in scout-speak.</p>
+          </header>
+
+          <div class="scout__grid">
+            <article class="report" data-reveal>
+              <span class="stamp" data-stamp>Day-one starter</span>
+              <header class="report__head">
+                <div><span>Prospect</span><strong>Joshua Mertz</strong></div>
+                <div><span>Position</span><strong>Tennis Content Curator</strong></div>
+                <div><span>School</span><strong>Harrisburg U '27</strong></div>
+                <div><span>Hometown</span><strong>Williamsville, NY</strong></div>
+              </header>
+
+              <h3>Strengths</h3>
+              <ul class="report__list">
+                <li><strong>Tennis-obsessed.</strong> It's his favorite sport, and he built a full 3D tennis game (career mode, a 32-event tour, rankings, rivals and a commentary booth) just because he loves it. Already following the next wave: Fonseca, Shelton, Alcaraz.</li>
+                <li><strong>Community-first.</strong> Has run online communities since he was a kid: 50+ UHC events, two college esports programs and three years of Discord moderation. Keeps a chat fun without letting it go off the rails.</li>
+                <li><strong>Creator instincts.</strong> About 200 edited YouTube videos, years of Twitch streams and a decade of graphics work. Knows what makes people stop scrolling.</li>
+                <li><strong>Knows the app.</strong> Sleeper member since September 2023, in it for the public chats, live scores and player props.</li>
+                <li><strong>Brings his own tools.</strong> Built an AI-written league newsletter (The Goofy Gazette), a multiview for big sports days and his own clip recorder. Automates the busywork and spends the time on the community.</li>
+              </ul>
+
+              <h3>Weaknesses</h3>
+              <p>Will build an app for any problem, including ones that already have an app. Will also talk your ear off about João Fonseca.</p>
+
+              <h3>Pro comparison</h3>
+              <p>Your fantasy league's commissioner who also built the league website.</p>
+
+              <h3>Bottom line</h3>
+              <p class="report__bottom">High-motor community builder who lives and breathes tennis, with real reps in moderation, content and esports ops. Knows the app, knows the sport, ships fast. Plug-and-play starter.</p>
+            </article>
+
+            <aside class="scout__side">
+              <article class="mysleeper" data-reveal>
+                <p class="mysleeper__kicker">My Sleeper</p>
+                <p class="mysleeper__since">Member since <strong>Sep 22, 2023</strong></p>
+                <p>I downloaded Sleeper for NFL over/unders and stayed for fantasy football. Paid picks aren't available in New York, so I'm in the app for the public chats, live scores and player props. That community side is exactly what I want to help grow, starting with tennis.</p>
+              </article>
+
+              <article class="trend" data-trending hidden>
+                <header class="trend__head">
+                  <span class="live-dot"></span>
+                  <div>
+                    <h3>Trending on Sleeper</h3>
+                    <p>Most-added NFL players, last 24 hours</p>
+                  </div>
+                </header>
+                <ol class="trend__list" data-trend-list></ol>
+                <p class="trend__foot">Live from Sleeper's public API, which covers football. Tennis is my sport, but the Bills are my team.</p>
+              </article>
+            </aside>
+          </div>
+
+          <div class="week">
+            <header class="week__head">
+              <h3 class="week__title" data-reveal>A tournament week in my tennis channel</h3>
+              <p data-reveal>How I'd keep Sleeper's tennis community busy all week, not just on finals day. During a Slam, run it twice.</p>
+            </header>
+            <ol class="week__grid">
+              <li class="day" data-reveal><span class="day__dow">Mon</span><h4>Draw breakdown</h4><p>Paths, upset alerts and a "pick your champion" poll the minute the draw drops.</p></li>
+              <li class="day" data-reveal><span class="day__dow">Tue</span><h4>Early-round threads</h4><p>Live threads for the big first-rounders, plus an upset-watch check-in.</p></li>
+              <li class="day" data-reveal><span class="day__dow">Wed</span><h4>Player spotlight</h4><p>One rising name (think Fonseca), with highlights and why he's worth watching.</p></li>
+              <li class="day" data-reveal><span class="day__dow">Thu</span><h4>Prop talk</h4><p>Aces, total games and set lines for the day's best matches, with the community's takes.</p></li>
+              <li class="day" data-reveal><span class="day__dow">Fri</span><h4>Quarterfinal day</h4><p>Match threads, momentum swings and the best clips as they happen.</p></li>
+              <li class="day" data-reveal><span class="day__dow">Sat</span><h4>Semis + stats</h4><p>Semifinal threads and the one stat that explains each result.</p></li>
+              <li class="day day--final" data-reveal><span class="day__dow">Sun</span><h4>Final + trophy lift</h4><p>The live final thread, the trophy moment and Monday's ranking movers.</p></li>
+            </ol>
+
+            <div class="sample" data-reveal>
+              <p class="sample__label">How I'd post it</p>
+              <div class="post">
+                <div class="post__avatar" aria-hidden="true">JM</div>
+                <div class="post__body">
+                  <p class="post__meta"><strong>Joshua</strong><span>Tennis · just now</span></p>
+                  <p class="post__text">Draw just dropped 👀 Who's your dark horse this week? One name only. I'll pin the best take before the first ball.</p>
+                  <div class="post__poll" data-poll>
+                    <button type="button" data-vote>Chalk all the way</button>
+                    <button type="button" data-vote>Give me chaos</button>
+                  </div>
+                  <p class="post__thanks" data-poll-thanks hidden>Vote locked in. (It's a sample post, but I like your style.)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 07 RESUME ============ -->
+      <section class="section resume" id="resume">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="sec-kicker"><span>07</span>Off the court</p>
+            <h2 class="sec-title" data-split>The rest of <em>the résumé.</em></h2>
+          </header>
+
+          <div class="resume__grid">
+            <article class="rcard" data-reveal>
+              <h3>School</h3>
+              <ul class="rlist">
+                <li><strong>Harrisburg University of Science and Technology</strong><span>B.S. Esports Management (online)</span><time>Jan 2026 – Spring 2027 (expected)</time></li>
+                <li><strong>Medaille College</strong><span>Esports Management</span><time>2021 – 2023</time></li>
+              </ul>
+            </article>
+
+            <article class="rcard" data-reveal>
+              <h3>Day jobs</h3>
+              <ul class="rlist">
+                <li><strong>DoorDash &amp; Uber Eats</strong><span>Delivery driver. Self-scheduled, customer-facing, and the reason DashTracker exists.</span><time>Oct 2019 – Present</time></li>
+                <li><strong>Jet's Pizza</strong><span>Delivery driver &amp; store associate</span><time>Apr 2025 – Apr 2026</time></li>
+                <li><strong>Dash's Market</strong><span>Grocery delivery driver, behind the wheel of a large Mercedes van</span><time>May 2022 – Jan 2023</time></li>
+                <li><strong>Buffalo Therapeutic Riding Center</strong><span>General maintenance</span><time>Summer 2019</time></li>
+                <li><strong>DiCamillo's Bakery</strong><span>Store associate &amp; cashier</span><time>Oct 2017 – Jan 2019</time></li>
+              </ul>
+            </article>
+
+            <article class="rcard" data-reveal>
+              <h3>Toolbox</h3>
+              <ul class="toolbox">
+                <li><strong>10 yrs</strong>Paint.NET</li>
+                <li><strong>9 yrs</strong>Video editing: Sony Vegas Pro, Camtasia, OpenShot, Shotcut</li>
+                <li><strong>2 yrs</strong>DaVinci Resolve</li>
+                <li><strong>Plus</strong>Photoshop</li>
+                <li><strong>3 yrs</strong>Discord moderation (servers with 100+ members)</li>
+                <li><strong>Events</strong>Game servers and events for 100+ players</li>
+              </ul>
+              <p class="rcard__label">AI stack</p>
+              <ul class="chips chips--sm">
+                <li>Claude Code</li><li>Codex</li><li>Gemini</li><li>ElevenLabs</li><li>Meshy</li><li>Google Flow</li><li>Blender</li><li>Godot</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact" id="contact">
+        <div class="wrap contact__inner">
+          <p class="eyebrow contact__eyebrow" data-reveal><span class="live-dot"></span>End of Season 4</p>
+          <h2 class="contact__title" data-split>Let's make it <em>Season 5.</em></h2>
+          <p class="contact__sub" data-reveal>I'm ready to get to work on Sleeper's tennis community. Email is the fastest way to reach me.</p>
+          <div class="contact__actions" data-reveal>
+            <a class="btn btn--lime btn--lg" href="mailto:joshuamertz716@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5zm2 .9v9.6h14V7.4l-7 5.1z M6.2 7h11.6L12 11.2z" fill="currentColor" /></svg>
+              joshuamertz716@gmail.com
+            </a>
+            <button class="btn btn--ghost" type="button" data-copy="joshuamertz716@gmail.com">Copy email</button>
+          </div>
+          <ul class="socials" data-reveal>
+            <li>
+              <a href="https://www.linkedin.com/in/joshua-mertz-967588237/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.86V21H9z" fill="currentColor" /></svg>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/xVechs" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.53 3h3.07l-6.7 7.66L21.8 21h-6.17l-4.83-6.32L5.27 21H2.2l7.17-8.2L1.8 3h6.33l4.36 5.77zm-1.08 16.17h1.7L7.06 4.74H5.24z" fill="currentColor" /></svg>
+                @xVechs
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitch.tv/xVechs" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.3 3 3 6.4V20h4.6v2.5h2.6l2.5-2.5h3.7L21 15.4V3zm15 11.6-2.9 2.9h-4.6l-2.5 2.5v-2.5H5.6V4.7h13.7zM15.9 7.6h-1.7v5h1.7zm-4.6 0H9.6v5h1.7z" fill="currentColor" /></svg>
+                Twitch
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/CounterCapperAI" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.53 3h3.07l-6.7 7.66L21.8 21h-6.17l-4.83-6.32L5.27 21H2.2l7.17-8.2L1.8 3h6.33l4.36 5.77zm-1.08 16.17h1.7L7.06 4.74H5.24z" fill="currentColor" /></svg>
+                @CounterCapperAI
+              </a>
+            </li>
+          </ul>
+        </div>
+        <footer class="footer">
+          <p>© 2026 Joshua Mertz · Built with Vite, GSAP and a lot of AI.</p>
+          <p>Not affiliated with Sleeper. Live data from Sleeper's public API and ESPN's public tennis feed.</p>
+        </footer>
+      </section>
+    </main>
+
+    <!-- Project "highlight package" -->
+    <dialog class="modal" data-modal aria-labelledby="modal-title">
+      <div class="modal__inner" data-lenis-prevent>
+        <button class="modal__close" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" /></svg>
+        </button>
+        <div class="modal__media">
+          <figure class="modal__stage">
+            <button class="modal__zoom" type="button" data-modal-zoom aria-label="Open this image full size"><img data-modal-img alt="" /></button>
+            <figcaption data-modal-cap></figcaption>
+          </figure>
+          <div class="modal__thumbs" data-modal-thumbs></div>
+        </div>
+        <div class="modal__info">
+          <p class="modal__meta" data-modal-meta></p>
+          <h3 class="modal__title" id="modal-title" data-modal-title></h3>
+          <p class="modal__tag" data-modal-tag></p>
+          <div class="modal__body" data-modal-body></div>
+          <div class="modal__nav">
+            <button class="btn btn--ghost btn--sm" type="button" data-modal-prev>← Prev pick</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-modal-next>Next pick →</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Full-size image viewer -->
+    <dialog class="lightbox" data-lightbox aria-label="Image viewer">
+      <button class="lightbox__close" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" /></svg>
+      </button>
+      <figure class="lightbox__fig">
+        <img data-lb-img alt="" />
+        <figcaption data-lb-cap></figcaption>
+      </figure>
+      <button class="lightbox__arrow lightbox__arrow--prev" type="button" data-lb-prev aria-label="Previous image">‹</button>
+      <button class="lightbox__arrow lightbox__arrow--next" type="button" data-lb-next aria-label="Next image">›</button>
+    </dialog>
+  </body>
+</html>

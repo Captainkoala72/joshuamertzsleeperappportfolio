@@ -1,0 +1,473 @@
+// The Draft Board: every project, in the order I'd draft them.
+// Pick 1.01 (DeuceTennis) has its own spotlight in index.html, so the board starts at 1.02.
+//
+// Fields
+//   pos      position chip on the card: tool | sports | game | ai | audio | community
+//   status   injury-report style tag: active | vet | ps (practice squad) | ir | hof
+//   cats     filter buttons it shows up under: sports | games | ai | tools
+//   wide     takes two columns on big screens
+//   fit      'phone' for portrait (mobile) screenshots
+//   images   keys from src/data/image-dims.js, first one is the card thumbnail
+
+export const projects = [
+  {
+    id: 'wispclips',
+    pick: '1.02',
+    title: 'WispClips',
+    tagline: 'Your last play. One hotkey away.',
+    pos: 'tool',
+    status: ['active', 'Active · Beta'],
+    cats: ['tools'],
+    wide: true,
+    summary:
+      'A tiny clipping app for Windows. It keeps a rolling buffer of your screen or one window, and a single hotkey saves the last 30 seconds. Built to stay as close to zero lag as possible while you game.',
+    body: [
+      'I wanted instant replays without a heavy overlay eating my frames, so I built my own. WispClips sits quietly in the background holding a rolling buffer of your monitor or a single window. Hit the hotkey and it saves the last stretch of gameplay, plus a few seconds after, straight to your clip library.',
+      'Everything stays on your PC: no accounts, no analytics, no uploads.',
+    ],
+    features: [
+      'Display or single-window capture at 60 fps (DXGI Desktop Duplication)',
+      'Set your clip length (30 seconds by default) plus a few seconds after the hotkey',
+      'System audio and mic, each with its own device picker',
+      'Hardware encoder with an automatic software fallback',
+      'Global hotkeys to save a clip and to pause or resume recording',
+      'Clip library: play, edit, rename, delete or open in Explorer',
+    ],
+    tech: ['C#', '.NET', 'DXGI', 'Windows'],
+    images: [
+      ['projects/wispclips2', 'The clip library: play, edit, rename, delete or open in Explorer'],
+      ['projects/wispclips1', 'Ready to record: one button starts the rolling buffer'],
+      ['projects/wispclips3', 'Setup: clip folder, save and pause hotkeys, display or window capture'],
+      ['projects/wispclips4', 'Settings: clip length, audio devices and the hardware encoder'],
+    ],
+  },
+  {
+    id: 'verbada',
+    pick: '1.03',
+    title: 'Verbada',
+    tagline: "I didn't want to pay for Word, so I built one.",
+    pos: 'tool',
+    status: ['active', 'Active'],
+    cats: ['tools'],
+    summary:
+      'A full word processor in the browser: ribbon toolbar, styles, templates, spellcheck, version history and unsaved-draft recovery.',
+    body: [
+      "Verbada exists because I didn't feel like paying for Word. It has the stuff I actually use there: a ribbon toolbar, styles, find and replace, paragraph settings, spellcheck and a live word count, plus Blank, MLA and APA templates.",
+      'It also keeps a version history and can recover unsaved drafts, then exports or prints when you are done.',
+    ],
+    features: [
+      'Word-style ribbon with styles and formatting',
+      'Find and replace, plus a full Paragraph dialog',
+      'Spellcheck and live word count',
+      'Blank, MLA and APA templates',
+      'Version history and Recover Unsaved',
+      'Export and print',
+    ],
+    tech: ['Web app', 'Rich-text editor'],
+    images: [
+      ['projects/verbada1', 'A full document in the Word-style editor'],
+      ['projects/verbada2', 'Start screen with Blank, MLA and APA templates'],
+      ['projects/verbada3', 'The Paragraph dialog: alignment, indentation and spacing'],
+    ],
+  },
+  {
+    id: 'fantasy',
+    pick: '1.04',
+    title: 'Fantasy Football Assistants',
+    tagline: 'An AI front office for every league I play in.',
+    pos: 'sports',
+    status: ['active', 'Active · Every season'],
+    cats: ['sports', 'ai'],
+    wide: true,
+    summary:
+      "A set of AI assistants for my fantasy leagues. Each one plugs into our ESPN league's API for live rosters, matchups and standings, then runs an AI analyst with custom parameters for that league.",
+    body: [
+      "I play in a few fantasy football leagues, and every league has its own scoring, its own group chat and its own personality. So instead of one generic bot, I build an assistant per league. Each site connects to that league's ESPN fantasy API, pulls live rosters, matchups and standings, and hands them to an AI with custom parameters for that league's settings and voice.",
+      "They're my favorite fun projects, and I keep improving them every season.",
+    ],
+    lineup: [
+      ['Flora//Fauna Fantasy Center', 'Gemini with high reasoning, screenshot vision and Google Search grounding, plus a trade evaluator and broadcast-style AI infographics. It runs several of my leagues.'],
+      ['WhaleCoach', 'An AI coach that breaks down matchups, suggests trades, finds waiver targets and pulls live injury news.'],
+      ['Goofy Cup Hub', 'A smart hub for our goofiest league: buy-ins and payouts, the schedule, an AI assistant and The Goofy Gazette, AI-written weekly stories about our league.'],
+      ['DWI Fantasy Assistant', 'Pick your model (GPT, MiMo, GLM or Claude Haiku), turn on web search, and get weekly recaps and power rankings.'],
+      ['SparkAssist', 'A lean league analyst wired straight into the DWI league.'],
+    ],
+    tech: ['ESPN Fantasy API', 'Gemini', 'GPT', 'Claude', 'Web search'],
+    images: [
+      ['projects/goofyfantasyhub1', 'Goofy Cup Hub: matchups, standings, the AI assistant and The Goofy Gazette'],
+      ['projects/florafauna1', 'Flora//Fauna: the AI assistant next to live league data'],
+      ['projects/florafauna2', 'Flora//Fauna: the trade evaluator comparing two rosters'],
+      ['projects/florafauna3', 'Flora//Fauna: AI image settings for broadcast-style infographics'],
+      ['projects/goofyfantasyhub3', "Goofy Cup Hub: the assistant's waiver targets, with sources"],
+      ['projects/goofyfantasyhub2', 'Goofy Cup Hub: the weekly schedule'],
+      ['projects/whalecoach', 'WhaleCoach: ask anything about your ESPN league'],
+      ['projects/mybestfantasyassistantwebsite', 'DWI Fantasy Assistant: model picker, web search and quick prompts'],
+      ['projects/sparkassist', 'SparkAssist: a league analyst for the DWI league'],
+    ],
+  },
+  {
+    id: 'ghl',
+    pick: '1.05',
+    title: 'Global Hoop League',
+    tagline: 'A fake sportsbook for a simulated basketball league.',
+    pos: 'sports',
+    status: ['vet', 'Veteran · One of my first'],
+    cats: ['sports', 'ai', 'games'],
+    summary:
+      'One of my first websites: a sportsbook for a league I simulate in Hoop Land, a mobile basketball game. A custom odds algorithm plus AI for the lines, news posts and a public chat.',
+    body: [
+      'GHL is one of my first real websites. I run a simulated league in Hoop Land (a mobile basketball game), and GHL is the sportsbook around it. A custom algorithm plus AI sets the spreads and moneylines, you bet fake currency ($DIMES) from a bet slip, and results come back with an odds breakdown.',
+      "AI also runs the media side. HoopBuzz Wire writes press-style posts with box-score graphics, and there's a public chat for talking trash. Run low on $DIMES and you can earn more in a retro shootout mini-game or by watching sponsored ads. Behind it all is an admin panel for odds, settling games and editing the AI prompts.",
+    ],
+    features: [
+      'Eight teams, a 14-week season and best-of-5 playoffs',
+      'Spreads, moneylines and a bet slip in fake currency ($DIMES)',
+      'HoopBuzz Wire: AI news posts with box-score graphics',
+      'Public chat',
+      'Retro Hoops Shootout mini-game and sponsored ads to earn $DIMES',
+      'Admin: odds calculator, match settling, AI prompt control and image settings',
+    ],
+    tech: ['Custom odds model', 'AI writing', 'AI images', 'Live chat'],
+    images: [
+      ['projects/ghl1', 'Active markets: spreads, moneylines and the bet slip'],
+      ['projects/ghl3', 'HoopBuzz Wire: AI posts with box-score graphics'],
+      ['projects/ghl2', 'Results, with the odds breakdown for every game'],
+      ['projects/ghl4', 'Get more $DIMES: a retro shootout or a sponsored ad'],
+      ['projects/ghl5', 'Admin: schedule matches, odds calculator, AI prompt control'],
+    ],
+  },
+  {
+    id: 'butter',
+    pick: '1.06',
+    title: 'Butter Notes',
+    tagline: 'A little space to think.',
+    pos: 'tool',
+    status: ['active', 'Active'],
+    cats: ['tools'],
+    summary:
+      "My personal notes site: a cozy dark room with a yellow legal pad, rich text and autosave. I keep personalizing it because it's built for exactly one user.",
+    body: [
+      "Butter is where my ideas go first. It's a dark, quiet UI with a lined yellow notepad, rich text and autosave to the browser. No accounts and no clutter.",
+      "It's the project I personalize the most, because it's built for exactly one user: me.",
+    ],
+    features: ['Rich-text notes', 'Autosaves in the browser', 'Lined legal-pad look', 'Distraction-free dark UI'],
+    tech: ['Web app', 'Local storage'],
+    images: [['projects/personalnoteswebsite', 'Butter: a lined notepad with rich text, saved in the browser']],
+  },
+  {
+    id: 'promptforge',
+    pick: '1.07',
+    title: 'PromptForge',
+    tagline: 'Turn rough prompts into great ones.',
+    pos: 'ai',
+    status: ['active', 'Active · v3+'],
+    cats: ['ai', 'tools'],
+    summary:
+      'I built several prompt optimizers chasing the perfect one. PromptForge is the keeper: AI models rebuild rough prompts into clean, structured ones, with custom presets.',
+    body: [
+      'Good AI output starts with a good prompt, and I write a lot of prompts. So I built a tool for it, then rebuilt it, then rebuilt it again. The early versions, like Prompt Optimizer v2 with its framework auto-detection, taught me what mattered. PromptForge is the one that stuck.',
+      'Paste a rough idea, pick Optimizer or Polisher, choose an output style (full agent or humanized), add reference images if you need them, and it hands back a clean, structured prompt. It has templates, custom presets and keeps API keys on the server.',
+    ],
+    features: [
+      'Optimizer and Polisher modes',
+      'Full-agent or humanized output styles',
+      'Reference images',
+      'Templates for images, apps, writing, code and more, plus custom presets',
+      'Earlier builds: framework auto-detection and a sandbox',
+      'API keys stay server-side',
+    ],
+    tech: ['Gemini', 'DeepSeek', 'Multi-model'],
+    images: [
+      ['projects/promptforge1', 'The workbench: rough input in, humanized prompt out'],
+      ['projects/promptforge2', 'Instructions, reference images, Optimizer or Polisher, output style'],
+      ['projects/promptoptimizer3', 'An earlier PromptForge with a template library'],
+      ['projects/promptoptimizer2', 'Prompt Optimizer v2: framework auto-detect and a sandbox'],
+    ],
+  },
+  {
+    id: 'musicmaker',
+    pick: '1.08',
+    title: 'VEX Music Maker',
+    tagline: 'The soundtrack lab for DeuceTennis.',
+    pos: 'audio',
+    status: ['active', 'Active'],
+    cats: ['ai', 'games'],
+    summary:
+      'Runs on my Pixazo API key and generates main-menu music for DeuceTennis: 24 presets across three music models, with a crate to download, remake or remix.',
+    body: [
+      "DeuceTennis needed a soundtrack, so I built a studio for it. VEX Music Maker connects to my Pixazo API key and generates music for the game's menus. Pick one of 24 presets or write your own direction, choose a model (MiniMax Music, Mureka Instrumental or Stable Audio), and keep the good ones in Your Crate to download, remake or remix.",
+      'VEX is a nod to xVex, my old Minecraft host name.',
+    ],
+    features: ['24 presets', 'Three music models', 'Your Crate: download, remake or remix', 'Built for DeuceTennis menu music'],
+    tech: ['Pixazo API', 'MiniMax Music', 'Mureka', 'Stable Audio'],
+    images: [
+      ['projects/musicmaker3', 'Sound in Play: the tennis soundtrack lab'],
+      ['projects/musicmaker1', 'Make some noise: pick a model and a preset, then generate'],
+      ['projects/musicmaker2', 'Your Crate: download, remake or remix every track'],
+    ],
+  },
+  {
+    id: 'taleweaver',
+    pick: '1.09',
+    title: 'Infinite Tale Weaver',
+    tagline: 'Infinite AI adventures, with pictures and a voice.',
+    pos: 'game',
+    status: ['active', 'Active'],
+    cats: ['ai', 'games'],
+    summary:
+      'Set the characters, scenery and scenario, and the AI keeps the story going forever with generated images, video and live voice narration.',
+    body: [
+      'A choose-your-own-adventure that never runs out of pages. You set the parameters, build your characters and pick the scenery and scenario. The AI takes it from there, generating scene images, video and live voice narration as you play.',
+      'It keeps save slots, a character sheet, inventory, a quest log and a codex so the story stays consistent.',
+    ],
+    features: [
+      'Custom characters, scenery and scenarios',
+      'AI scene images and video',
+      'Live voice: hear every line or just a summary',
+      'Save slots, character sheet, inventory, quest log and codex',
+    ],
+    tech: ['AI story', 'AI images', 'AI video', 'AI voice'],
+    images: [
+      ['projects/infinitetaleweaver3', 'Every scene gets its own generated art'],
+      ['projects/infinitetaleweaver2', 'Scene art, story choices, inventory and quest log'],
+      ['projects/infinitetaleweaver1', 'Your adventures: every save slot is its own story'],
+    ],
+  },
+  {
+    id: 'castlebonk',
+    pick: '1.10',
+    title: 'Castle Bonk!',
+    tagline: 'A daily nonsense game to play with friends.',
+    pos: 'game',
+    status: ['ps', 'Practice squad'],
+    cats: ['games'],
+    summary:
+      'An experiment in a phone game my friends and I can play together: a 4-player 3D board with join codes, turn alerts and bots. Real strategy is the goal, and it still needs work.',
+    body: [
+      'Castle Bonk started as a one-shot AI build and turned into an experiment I keep poking at. It is a 4-player 3D board game for phones with join codes, turn alerts and bots (Robo Rita, Bonkbot and Clanky) to fill empty seats.',
+      "The goal is a game with real strategy that my friends will actually play. It isn't there yet, which is why it's on the practice squad.",
+    ],
+    features: ['4-player 3D board', 'Join codes to play with friends', 'Turn alerts', 'Bots: Robo Rita, Bonkbot and Clanky'],
+    tech: ['3D in the browser', 'Multiplayer', 'Mobile-first'],
+    images: [
+      ['projects/oneshottedbrowsergame2', 'Your move on the 4-player board'],
+      ['projects/oneshottedbrowsergame1', 'Home: play with friends, join code, turn alerts'],
+      ['projects/oneshottedbrowsergame3', "The bots take their turns (Clanky's thinking really hard)"],
+    ],
+  },
+  {
+    id: 'draftscheduler',
+    pick: '2.01',
+    title: 'Draft Day Scheduler',
+    tagline: "When can't you draft?",
+    pos: 'sports',
+    status: ['active', 'Active'],
+    cats: ['sports', 'tools'],
+    fit: 'phone',
+    summary:
+      'Getting a whole league into one draft room is the hardest part of fantasy. Everyone marks when they are busy, and the site finds the best time.',
+    body: [
+      "Everyone taps the time slots they can't make on a simple grid, and the site finds the window that works for the most people. I built it for our Goofy Cup 2026 draft in late August.",
+      'It is a good example of how fast AI lets me turn a group-chat problem into a working site.',
+    ],
+    features: ['Availability grid', 'Best-time finder', 'Mobile-first', 'Built for the Goofy Cup 2026 draft'],
+    tech: ['Web app', 'Mobile-first'],
+    images: [['projects/fantasydraftscheduler', "Tap every time you can't draft, and the site finds the window"]],
+  },
+  {
+    id: 'fixmycity',
+    pick: '2.02',
+    title: 'FixMyCity',
+    tagline: 'Snap it. Report it. Get it fixed.',
+    pos: 'ai',
+    status: ['active', 'Active'],
+    cats: ['ai', 'tools'],
+    fit: 'phone',
+    summary:
+      'See a pothole, snap a photo. AI writes up the problem and sends it to local town officials with the location attached.',
+    body: [
+      'Reporting a broken streetlight should not take a phone tree. With FixMyCity you upload a photo, AI identifies the issue and writes a clear report, and the location is attached automatically before it goes to local town officials.',
+      'It runs on live Gemini analysis, with an offline simulation mode for testing.',
+    ],
+    features: ['Photo upload', 'AI issue detection and write-up', 'Location attached automatically', 'Structured report for officials', 'Live Gemini or offline sim mode'],
+    tech: ['Gemini vision', 'Geolocation', 'Structured output'],
+    images: [['projects/fixmycity1', 'Upload evidence, attach the location, get a structured report']],
+  },
+  {
+    id: 'countercapper',
+    pick: '2.03',
+    title: 'CounterCapper',
+    tagline: 'Quit tailing cappers. Become one.',
+    pos: 'sports',
+    status: ['ir', 'IR · On hiatus'],
+    cats: ['sports', 'ai'],
+    summary:
+      'A big project on hiatus. Ask for Counter-Strike 2 picks the way you would ask a friend, and AI builds bets from match data and market odds.',
+    body: [
+      "CounterCapper gives you Counter-Strike 2 bets based on what you ask for. Under the hood it pulls match data and Polymarket odds into its own database, then AI models turn it into picks and plain-English breakdowns.",
+      "It has a free Basic AI, a Premium AI and a Premium FADE AI for contrarian plays, plus an admin panel to set the model, creativity and data sources for every AI in the pipeline. It's on IR for now, but it still has its own X account: @CounterCapperAI.",
+    ],
+    features: [
+      'Picks on demand: ask about a match, a team or a slate',
+      'Its own match database plus Polymarket odds',
+      'AI summaries for every pick',
+      'Basic, Premium and FADE tiers',
+      'Admin: model, creativity and data sources per AI, plus usage tracking',
+    ],
+    tech: ['DeepSeek', 'Polymarket odds', 'Custom database', 'Subscriptions'],
+    images: [
+      ['projects/countercapper1', '"Quit tailing Twitter cappers and become a capper yourself."'],
+      ['projects/countercapper2', 'Basic, Premium and FADE AI tiers'],
+      ['projects/countercapper3', "Premium AI: ask for picks like you'd ask a friend"],
+      ['projects/countercapper4', 'Admin: model, creativity and data sources for each AI'],
+    ],
+  },
+  {
+    id: 'apexprotocol',
+    pick: '2.04',
+    title: 'Apex Protocol',
+    tagline: 'A fantasy CS2 esports manager.',
+    pos: 'game',
+    status: ['active', 'Active'],
+    cats: ['games', 'sports'],
+    fit: 'phone',
+    summary:
+      'Run your own CS2 org: build a roster by role, upgrade facilities, land sponsors and chase a Major. Your team is Arcus Esports, a nod to where my UHC career started.',
+    body: [
+      'This one mixes my two worlds, esports management and games. You run a CS2 organization: sign players by role (Entry, AWP, Lurker, Support and IGL), set the training focus, upgrade facilities, land sponsors and fight your way into a Major.',
+      'Your org is Arcus Esports, a nod to The Arcus Network, the Minecraft server where I hosted my first UHC games back in 2014.',
+    ],
+    features: ['Roster building by role', 'Circuit standings and Major qualification', 'Transfer market with scouting', 'Facilities, sponsors and a weekly ledger', 'Mobile-first UI'],
+    tech: ['Management sim', 'Mobile-first'],
+    images: [
+      ['projects/apexprotocol1', "Hub: Arcus Esports' next match, objectives and treasury"],
+      ['projects/apexprotocol2', 'Team: roster ratings and weekly training focus'],
+      ['projects/apexprotocol3', 'Circuit: standings and Major qualification'],
+      ['projects/apexprotocol4', 'Market: scout and sign free agents'],
+      ['projects/apexprotocol5', 'Club: upgrade facilities and check the weekly ledger'],
+    ],
+  },
+  {
+    id: 'dashtracker',
+    pick: '2.05',
+    title: 'DashTracker',
+    tagline: 'Every shift. Every dollar.',
+    pos: 'tool',
+    status: ['active', 'Active'],
+    cats: ['tools'],
+    summary:
+      "I've delivered for DoorDash since 2019. DashTracker shows what you really made after miles, gas and taxes, as a real hourly rate.",
+    body: [
+      'Delivery apps show you what you earned, not what you made. DashTracker fixes that. Log a shift and it subtracts gas and mileage, shows your real hourly rate, and tells you exactly how much to set aside for taxes.',
+    ],
+    features: ['Gross vs. after-expense earnings', 'Real hourly rate', 'Miles and gas', 'Tax set-aside'],
+    tech: ['Web app'],
+    images: [['projects/dashtracker', 'Gross, after expenses, real hourly rate, miles and tax set-aside']],
+  },
+  {
+    id: 'edgefinder',
+    pick: '2.06',
+    title: 'EdgeFinder',
+    tagline: "What's the play?",
+    pos: 'sports',
+    status: ['active', 'Active'],
+    cats: ['sports', 'ai'],
+    summary:
+      'Betting research for any sport. Name a game, a player, a sport or a vibe, and it digs into live lines, injuries and form.',
+    body: [
+      'EdgeFinder is a research assistant for sports betting. Name a game, a player, a sport or a vibe, and it digs into live lines, injuries and recent form, then lays out the picks it thinks are worth your units.',
+      'Fast mode gives quick reads, Deep mode does full research, and one-tap prompts cover things like "Best of the day," "3-leg parlay" and "Fade finder." Every answer carries the same reminder: estimates, not locks.',
+    ],
+    features: ['Any sport', 'Fast and Deep research modes', 'One-tap prompts', 'Saved chats', 'Responsible-gambling reminders built in'],
+    tech: ['AI research', 'Web search', 'Live lines'],
+    images: [['projects/edgefinder', '"What\'s the play?" Fast or Deep research on any sport']],
+  },
+  {
+    id: 'thewall',
+    pick: '2.07',
+    title: 'The Wall',
+    tagline: 'Every game, one screen.',
+    pos: 'sports',
+    status: ['active', 'Active'],
+    cats: ['sports', 'ai'],
+    summary:
+      'A multiview for any livestream. Paste embed codes or plain links, pick a layout, and watch everything at once, with an AI sports analyst on the side.',
+    body: [
+      'Big sports days mean too many games at once. The Wall puts any livestream on one screen: paste an embed code or a plain link, choose a layout (1, 2, 4, 6 or 9 streams, or one big plus three small) and switch to theater mode.',
+      'On the side is ANALYST, an AI with web search that answers the question everybody is asking: "What are we calling?"',
+    ],
+    features: ['Layouts: 1UP, 2UP, 2x2, 1+3, 3x2 and 3x3', 'Embed codes or plain URLs', 'Theater mode', 'AI analyst with web search'],
+    tech: ['Stream embeds', 'DeepSeek', 'Web search'],
+    images: [
+      ['projects/thewall1', 'The Wall: pick a layout and paste your streams'],
+      ['projects/thewall2', 'ANALYST: "What are we calling?"'],
+    ],
+  },
+  {
+    id: 'soundboard',
+    pick: '2.08',
+    title: 'Man Cave Soundboard',
+    tagline: 'Every big play deserves a button.',
+    pos: 'audio',
+    status: ['active', 'Active'],
+    cats: ['sports', 'tools'],
+    summary:
+      'A custom soundboard for watching sports: 78 pads, your own uploads, hotkeys and a live mic with effects.',
+    body: [
+      'Built for watching games: 78 sound pads across football, basketball, hockey, baseball, soccer and more, plus your own uploads, editable pads, favorites and hotkeys.',
+      'There is also a live mic rig with effects, for when a play deserves your own commentary.',
+    ],
+    features: ['78 pads across six categories', 'Upload your own sounds', 'Hotkeys and favorites', 'Live mic with effects'],
+    tech: ['Web Audio', 'Hotkeys'],
+    images: [['projects/soundboard1', '78 pads across football, basketball, hockey, baseball and soccer']],
+  },
+  {
+    id: 'meditation',
+    pick: '2.09',
+    title: 'Meditation Studio',
+    tagline: 'Calm, on your settings.',
+    pos: 'audio',
+    status: ['active', 'Active'],
+    cats: ['ai'],
+    summary:
+      'A meditation app where you set everything: length, intention, voice and breathing pattern. One AI writes the session and another performs it.',
+    body: [
+      'Most meditation apps hand you their sessions. This one builds yours. Choose the length, intention, voice and breathing pattern, or start from a preset.',
+      'A two-model pipeline does the rest: one model writes the script, and Gemini text-to-speech performs it as a lossless audio master.',
+    ],
+    features: ['Presets to start from', 'Pick from 30 voices', 'Custom breathing patterns', 'Writer model plus text-to-speech'],
+    tech: ['Kimi', 'Gemini', 'Text-to-speech'],
+    images: [['projects/meditation', 'Presets, intention, duration, voice and breathing pattern']],
+  },
+  {
+    id: 'uhc',
+    pick: '2.10',
+    title: 'Minecraft UHC',
+    tagline: 'Last pick. First love.',
+    pos: 'community',
+    status: ['hof', 'Hall of Fame'],
+    cats: ['games'],
+    summary:
+      'Where it all started. Thousands of hours setting up servers, moderating and hosting 50+ Ultra Hardcore matches for 40–80 players each.',
+    action: ['Open the vault', '#vault'],
+    tech: ['Server hosting', 'Java plugins', 'Reddit', 'Moderation'],
+    images: [['uhc/uhc22', 'Reddit posts for xVex\'s UHC games, July 2016']],
+  },
+];
+
+export const POSITIONS = {
+  tool: 'TOOL',
+  sports: 'SPORTS',
+  game: 'GAME',
+  ai: 'AI',
+  audio: 'AUDIO',
+  community: 'COMMUNITY',
+};
+
+export const FILTERS = [
+  ['all', 'All picks'],
+  ['sports', 'Sports & fantasy'],
+  ['games', 'Games'],
+  ['ai', 'AI-powered'],
+  ['tools', 'Tools'],
+];
