@@ -450,7 +450,7 @@ export const projects = [
     summary:
       'Where it all started. Thousands of hours setting up servers, moderating and hosting 50+ Ultra Hardcore matches for 40–80 players each.',
     action: ['Open the vault', '#vault'],
-    tech: ['Server hosting', 'Java plugins', 'Reddit', 'Moderation'],
+    tech: ['Server hosting', 'Skript', 'Texture packs', 'Reddit', 'Moderation'],
     images: [['uhc/uhc22', 'Reddit posts for xVex\'s UHC games, July 2016']],
   },
 ];

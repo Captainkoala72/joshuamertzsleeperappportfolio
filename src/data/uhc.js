@@ -21,7 +21,7 @@ export const eras = [
     games: 'Games #14–31',
     strips: [
       ['uhc15', "Reddit post for xVex's Game #31, August 2015"],
-      ['uhc14', "Reddit posts for xVex's Games #28–30, including my MeleeFun scenario, August 2015"],
+      ['uhc14', "Reddit posts for xVex's Games #28–30, August 2015"],
       ['uhc13', "Reddit posts for xVex's Games #23–27, August 2015"],
       ['uhc12', "Reddit post for xVex's Game #22, July 2015"],
       ['uhc10', "Reddit post for xVex's Game #20 on Arcus UHC, July 2015"],
@@ -56,11 +56,10 @@ export const eras = [
   },
 ];
 
-// Game modes ("scenarios") from those posts. MeleeFun was my own Java plugin.
+// Game modes ("scenarios") from those posts.
 export const scenarios = [
   'Cutclean', 'Barebones', 'Rush', 'Superheroes', 'Timebomb', 'Potential Hearts',
   'Switcharoo', 'Moles', 'Skyhigh', 'Blood Diamonds', 'Paranoia', 'Backpacks',
   'Triple Ores', 'Select Fire', 'MeleeFun', 'Best PvE', 'Truelove', 'Red vs Blue',
   'NoFall', 'Rewarding Longshots', 'Vanilla+',
 ];
-export const MY_PLUGIN = 'MeleeFun';

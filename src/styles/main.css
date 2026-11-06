@@ -3413,13 +3413,6 @@ main {
   font-size: 0.88rem;
 }
 
-.scenarios li.is-mine {
-  border-color: var(--lime);
-  background: var(--lime);
-  color: var(--lime-ink);
-  font-weight: 800;
-}
-
 .feed {
   max-width: 1100px;
   margin-inline: auto;

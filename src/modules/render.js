@@ -1,7 +1,7 @@
 // Builds the data-driven parts of the page: ticker, draft board, vault feed and links.
 import { gsap } from 'gsap';
 import { projects, POSITIONS, FILTERS } from '../data/projects.js';
-import { eras, scenarios, MY_PLUGIN } from '../data/uhc.js';
+import { eras, scenarios } from '../data/uhc.js';
 import { uhcLinks } from '../data/uhc-links.js';
 import { DIMS } from '../data/image-dims.js';
 import { $, $$, esc, imgTag, layoutChanged, reduceMotion } from '../lib/dom.js';
@@ -106,7 +106,7 @@ export function renderVault() {
   const list = $('[data-scenarios]');
   if (list) {
     list.innerHTML = scenarios
-      .map((s) => (s === MY_PLUGIN ? `<li class="is-mine" title="My own Java plugin">★ ${esc(s)}</li>` : `<li>${esc(s)}</li>`))
+      .map((s) => `<li>${esc(s)}</li>`)
       .join('');
   }
 
